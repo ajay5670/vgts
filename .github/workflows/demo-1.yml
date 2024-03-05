@@ -3,7 +3,6 @@ on: push
 jobs:
   my-job:
     runs-on: self-hosted
-    labels:
       - label-1 
     steps:
       - name: my-step
