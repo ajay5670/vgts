@@ -2,7 +2,11 @@ name: hello-world
 on: push
 jobs:
   my-job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: my-step
         run: echo "Hello World!"
+      - name: run step1
+        run: echo "hello from ec2 "
+      - name: run step2
+        run: echo "if you are seeing this, this is self hosted server"
