@@ -1,23 +1,8 @@
-name: Your Workflow
-
-on:
-  push:
-    branches:
-      - main
-
+name: hello-world
+on: push
 jobs:
-  your_job:
+  my-job:
     runs-on: self-hosted
-    container:
-      image: ubuntu:latest
-    labels:
-      - label-1
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Run Step 1
-        run: echo "Running Step 1"
-
-      - name: Run Step 2
-        run: echo "Running Step 2"
+      - name: my-step
+        run: echo "Hello World!"
