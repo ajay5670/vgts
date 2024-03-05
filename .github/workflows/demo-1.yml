@@ -1,8 +1,21 @@
-name: hello-world
-on: push
+name: Your Workflow
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  my-job:
+  your_job:
     runs-on: self-hosted
     steps:
-      - name: my-step
-        run: echo "Hello World! "
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Step 1
+        run: echo "Running Step 1"
+
+      - name: Run Step 2
+        run: echo "Running Step 2"
+
+      # Add more steps as needed
