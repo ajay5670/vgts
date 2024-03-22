@@ -1,18 +1,13 @@
-name: Trigger Workflow in Another Repo
+name: Triggered Workflow
 
 on:
   repository_dispatch:
-    types: [execute-workflow]
+    types: [trigger-workflow]
 
 jobs:
-  execute:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repo B
-        uses: actions/checkout@v2
-        with:
-          repository: ajay55670/gts  
-          ref: main  
-      - name: Execute YAML File
-        run: |
-          # Execute your YAML file here
+        - name: Print a message
+          run: echo "This workflow was triggered by a repository_dispatch event."
